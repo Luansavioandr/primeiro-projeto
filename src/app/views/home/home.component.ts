@@ -56,7 +56,7 @@ export class HomeComponent implements OnInit {
         if (result.id > 0){
           this.periodicElementService.editElement(result)
           .subscribe((data: PeriodicElement) => {
-            this.dataSource[result.id - 1] = result;
+            this.dataSource[result.id =- 1] = result;
             this.table.renderRows();
           });
         } else {
