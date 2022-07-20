@@ -17,7 +17,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
+import { CarroComponent } from './views/carro/carro.component';
+import { CreateComponent } from './views/carro/create/create.component';
+import { EditComponent } from './views/carro/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,10 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    ElementDialogComponent
+    ElementDialogComponent,
+    CarroComponent,
+    CreateComponent,
+    EditComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,45 @@
+<div class="formato">
+    <button mat-button color="primary" routerLink="/carro/create">Add Carro</button>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let carro"> {{carro.id}} </td>
+      </ng-container>
+
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef> Nome </th>
+      <td mat-cell *matCellDef="let carro"> {{carro.nome}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="cor">
+      <th mat-header-cell *matHeaderCellDef> Cor </th>
+      <td mat-cell *matCellDef="let carro"> {{carro.cor}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="ano">
+      <th mat-header-cell *matHeaderCellDef> Ano </th>
+      <td mat-cell *matCellDef="let carro"> {{carro.ano}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="placa">
+      <th mat-header-cell *matHeaderCellDef> Placa </th>
+      <td mat-cell *matCellDef="let carro"> {{carro.placa}} </td>
+    </ng-container>
+    <ng-container matColumnDef="opçoes">
+        <th mat-header-cell *matHeaderCellDef> Opçoes </th>
+        <td mat-cell *matCellDef="let element">
+            <button mat-icon-button color="primary">
+                <mat-icon routerLink="/carro/edit">edit</mat-icon>
+              </button>
+              <button mat-icon-button color="primary">
+                <mat-icon>delete</mat-icon>
+              </button>
+        </td>
+      </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+  
