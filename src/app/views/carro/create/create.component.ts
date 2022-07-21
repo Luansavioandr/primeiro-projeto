@@ -1,13 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
+import { Carro } from 'src/app/Models/Carro';
 
-export interface Carro {
-  id: number;
-  nome: string;
-  cor: string;
-  ano: string;
-  placa: string;
-}
 
 @Component({
   selector: 'app-create',
@@ -15,12 +9,7 @@ export interface Carro {
   styleUrls: ['./create.component.css']
 })
 export class CreateComponent implements OnInit {
-  email = new FormControl('', [Validators.required, Validators.email]);
   carro!: Carro;
-
-  getErrorMessage() {
-
-  }
 
   constructor() { }
 

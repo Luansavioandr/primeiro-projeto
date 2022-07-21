@@ -2,5 +2,10 @@
     margin-left: 8px;
   }
   .angulo {
-    padding: 50px;
+    padding: 50px; 
+    
+  }
+  .example-button-row {
+    display: table-cell;
+    width: 490px;
   }
