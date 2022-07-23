@@ -4,23 +4,27 @@ import { Observable } from 'rxjs';
 import { Carro } from '../Models/Carro';
 
 @Injectable()
-export class PeriodicElementService {
-    carroApiUrl = '';
+export class CarroService {
+    carroApiUrl = 'https://localhost:7217/api/CarroApi';
   constructor(private http: HttpClient) { }
 
-  getelement(): Observable<Carro[]> {
+  getCarro(): Observable<Carro[]> {
     return this.http.get<Carro[]>(this.carroApiUrl);
   }
 
-  createElements(carro: Carro): Observable<Carro> {
-    return this.http.post<Carro>(this.carroApiUrl, carro);
-  }
-  
-  editElement(carro: Carro): Observable<Carro> {
-    return this.http.put<Carro>(this.carroApiUrl, carro);
+  getCarroPorid(id: number): Observable<Carro> {
+    return this.http.get<Carro>(`${this.carroApiUrl}?id=${id}`);
   }
 
-  deleteElement(id: number): Observable<any> {
+  createCarro(carro: Carro): Observable<string> {
+    return this.http.post<string>(this.carroApiUrl, carro);
+  }
+  
+  editCarro(carro: Carro): Observable<string> {
+    return this.http.put<string>(this.carroApiUrl, carro);
+  }
+
+  deleteCarro(id: number): Observable<any> {
     return this.http.delete<any>(`${this.carroApiUrl}?id=${id}`);
   }
 }

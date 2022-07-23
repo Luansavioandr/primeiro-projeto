@@ -1,32 +1,33 @@
+
 <div class='angulo'>
     <span>Adicionar um Carro</span>
 </div>
 <div class="forma-container">
     <mat-form-field appearance="fill">
       <mat-label>Nome</mat-label>
-      <input matInput>
+      <input matInput [(ngModel)]="carro.nome">
     </mat-form-field>
   </div>
   <div class="forma-container">
     <mat-form-field appearance="fill">
       <mat-label>Cor</mat-label>
-      <input matInput>
+      <input matInput [(ngModel)]="carro.cor">
     </mat-form-field>
   </div>
   <div class="forma-container">
     <mat-form-field appearance="fill">
       <mat-label>Ano</mat-label>
-      <input matInput>
+      <input matInput [(ngModel)]="carro.ano">
     </mat-form-field>
   </div>
   <div class="forma-container">
     <mat-form-field appearance="fill">
       <mat-label>Placa</mat-label>
-      <input matInput required>
+      <input matInput [(ngModel)]="carro.placa" required>
     </mat-form-field>
 <section>
     <div class="example-button-row">
-      <button mat-button color="primary">Adicionar</button>
+      <button mat-button (click)="salvar()" color="primary">Adicionar</button>
       <button mat-button>Cancelar</button>
   </div>    
 </section>
