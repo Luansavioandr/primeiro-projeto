@@ -15,11 +15,11 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ElementDialogComponent } from './shared/element-dialog/element-dialog.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CarroComponent } from './views/carro/carro.component';
 import { CreateComponent } from './views/carro/create/create.component';
 import { EditComponent } from './views/carro/edit/edit.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -43,6 +43,7 @@ import { EditComponent } from './views/carro/edit/edit.component';
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
+    ReactiveFormsModule,
     NoopAnimationsModule,
     HttpClientModule
   ],

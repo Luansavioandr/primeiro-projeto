@@ -1,8 +1,8 @@
-export interface Carro {
-    id: number;
-    nome: string;
-    cor: string;
-    ano: string;
-    placa: string;
+export class Carro {
+    id: number = 0;
+    nome: string = "";
+    cor: string = "";
+    ano: string = "";
+    placa: string = "";
   }
   

@@ -16,7 +16,7 @@ const routes: Routes = [
     path: 'carro/create', component: CreateComponent
   },
   {
-    path: 'carro/edit', component: EditComponent
+    path: 'carro/edit/:id', component: EditComponent
   },
 ];
 

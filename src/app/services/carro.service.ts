@@ -13,7 +13,7 @@ export class CarroService {
   }
 
   getCarroPorid(id: number): Observable<Carro> {
-    return this.http.get<Carro>(`${this.carroApiUrl}?id=${id}`);
+    return this.http.get<Carro>(`${this.carroApiUrl}/${id}`);
   }
 
   createCarro(carro: Carro): Observable<string> {
@@ -25,6 +25,6 @@ export class CarroService {
   }
 
   deleteCarro(id: number): Observable<any> {
-    return this.http.delete<any>(`${this.carroApiUrl}?id=${id}`);
+    return this.http.delete<any>(`${this.carroApiUrl}/${id}`);
   }
 }

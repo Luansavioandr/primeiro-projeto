@@ -19,14 +19,21 @@ export class CarroComponent implements OnInit {
 
   constructor(
     public carroService: CarroService
-  ) {
+  ) {}
+
+  ngOnInit(): void {
     this.carroService.getCarro()
     .subscribe((data: Carro[]) => {
       this.dataSource = data;
     }); 
   }
-
-  ngOnInit(): void {
+  deleteCarro(id: number): void {
+    this.carroService.deleteCarro(id).subscribe(() => {
+      this.carroService.getCarro()
+      .subscribe((data: Carro[]) => {
+        this.dataSource = data;
+        this.table.renderRows();
+      }); 
+    });
   }
- 
 }
