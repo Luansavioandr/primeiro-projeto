@@ -20,6 +20,9 @@ import { CarroComponent } from './views/carro/carro.component';
 import { CreateComponent } from './views/carro/create/create.component';
 import { EditComponent } from './views/carro/edit/edit.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EstudoComponent } from './views/estudo/estudo.component';
+import { EditestudoComponent } from './views/estudo/editestudo/editestudo.component';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CarroComponent,
     CreateComponent,
     EditComponent,
+    EstudoComponent,
+    EditestudoComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,7 +50,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
     NoopAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

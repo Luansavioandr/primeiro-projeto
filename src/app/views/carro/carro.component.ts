@@ -3,8 +3,6 @@ import { MatTable } from '@angular/material/table';
 import { Carro } from 'src/app/Models/Carro';
 import { CarroService } from 'src/app/services/carro.service';
 
-
-
 @Component({
   selector: 'app-carro',
   templateUrl: './carro.component.html',

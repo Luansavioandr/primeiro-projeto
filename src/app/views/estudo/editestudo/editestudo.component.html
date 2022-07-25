@@ -1,0 +1,28 @@
+<div class='angulo'>
+    <span>Editar</span>
+  </div>
+  <form [formGroup]="this.form" (ngSubmit)="onSubmit()" >
+  <div class="forma-container">
+      <mat-form-field appearance="fill">
+        <mat-label>userId</mat-label>
+        <input matInput formControlName="userId">
+      </mat-form-field>
+    </div>
+    <div class="forma-container">
+      <mat-form-field appearance="fill">
+        <mat-label>title</mat-label>
+        <input matInput formControlName="title">
+      </mat-form-field>
+    </div>
+    <mat-radio-group formControlName="completed" aria-label="completed">
+        <mat-radio-button value="true">True</mat-radio-button>
+        <mat-radio-button value="false">False</mat-radio-button>
+      </mat-radio-group>
+    
+  <section>
+      <div class="example-button-row">
+        <button mat-button type="submit" color="primary">Editar</button>
+        <button mat-button routerLink="/carro">Cancelar</button>
+    </div>    
+  </section>
+  </form>
