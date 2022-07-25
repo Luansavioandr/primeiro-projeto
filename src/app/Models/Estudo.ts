@@ -3,4 +3,4 @@ export class Estudo {
     id: number = 0;
     title: string = "";
     completed: Boolean = true;
-  }
+  } 
